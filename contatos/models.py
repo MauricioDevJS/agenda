@@ -14,5 +14,7 @@ class Contatos (models.Model):
     
     def __str__(self):
         return self.nome
+    
+    
     class Meta:
         verbose_name_plural = 'Contatos'

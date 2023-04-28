@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+{%load static%}
 <html>
     <head>
         <meta charset="utf-8">
@@ -7,11 +7,48 @@
         <title>Documentos</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
+        <link rel="stylesheet" href={% static 'style.css' %}>    </head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <body>
-        <h1>Olá mundo!</h1>
-        
+        <h1>Agenda</h1>
 
+        <form action="{% url 'busca' %}">
+            <input type="text" name="search" placeholder="Bucar contato...">
+            <button type="submit">Buscar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>CPF</th>
+                    <th>Ativo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contato in contatos %}
+                <tr>
+                    <td>{{contato.id}}</td>
+                    <td>{{contato.nome}}</td>
+                    <td>{{contato.email}}</td>
+                    <td>{{contato.cpf}}</td>
+
+                    {% if contato.ativo == True %}
+                    <td><i class="fa fa-check"></i></td>
+                    {% else %}
+                    <td><i class="fa fa-x"></i></td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+        </div>
     </body>
 </html>

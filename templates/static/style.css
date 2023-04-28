@@ -1,0 +1,63 @@
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: none;
+}
+
+table{
+        width: 800px;
+        margin: 40px auto;
+        border-collapse: collapse;
+        text-align: left;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+}
+
+thead > tr{
+        background-color: rgb(71, 100, 27);
+        color:#fff;
+}
+
+tr > th, tr > td{
+        padding: 15px 20px;
+}
+
+tbody > tr:nth-last-of-type(even){
+        background-color: rgba(0, 0, 0, 0.100);
+}
+
+tbody > tr:last-of-type{
+        border-bottom: 3px solid rgb(71, 100, 27);
+}
+
+.pagination{
+        display: flex;
+        width: 800px;
+        margin: 5px auto;
+        gap: 3px;
+}
+
+.pagination > a{
+        background-color: rgb(71, 100, 27);
+        padding: 10px 15px;
+        color: #fff;
+        border-radius: 10px;
+}
+
+h1{
+        text-align: center;
+        margin: 10px auto;
+        color: rgb(71, 100, 27);
+}
+
+form{
+        width: 800px;
+        margin: 10px auto;
+}
+
+form > input{
+        height: 2rem;
+        padding: 0px 2px;
+}
