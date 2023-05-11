@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="{% static 'jquery.mask.js' %}"></script>
+    <script defer src="{% static 'jquery.mask.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data" action=""> {% csrf_token %}
+        <input name="nome" type="text" placeholder="nome">
+        <input class="cpf" name="cpf" type="text" placeholder="cpf">
+        <input name="email" type="text" placeholder="email">
+        <input class="telefone" name="telefone" type="text" placeholder="telefone">
+        <input class="altura" name="altura" type="text" placeholder="altura">
+        <input name="descricao" type="text" placeholder="descrição">
+        <input name="data_nasc" type="date">
+        <input name="imagem" type="file">
+        <button type="submit">Adicionar</button>
+    </form>
+
+
+    <script>
+        $(document).ready(function(){
+            $('.altura').mask('0.00')
+            $('.cpf').mask('000.000.000-00')
+            $('.telefone').mask('00 00000 0000')
+        })
+    </script>
+
+
+</body>
+</html>
