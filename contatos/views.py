@@ -1,6 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from . models import Contatos
+from django.contrib.auth.decorators import login_required
 
+@login_required(redirect_field_name='login')
 def index(request):
     contatos = Contatos.objects.all().order_by('-id')
     return render(request, 'pages/index.html', {'contatos':contatos})
@@ -11,7 +13,8 @@ def search(request):
     return render(request, 'pages/index.html', {'contatos':contatos})
 
 def detalhes(request, id):
-    contato = Contatos.objects.get(id=id)
+    # contato = Contatos.objects.get(id=id)
+    contato = get_object_or_404(Contatos, id=id)
     return render(request, 'pages/detalhes.html', {'contato':contato})
 
 def deletar(request, id):
