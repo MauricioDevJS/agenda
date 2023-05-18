@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+        <title>Cadastro</title>
+    </head>
+    <body>
+        <main class="cadastro_screen">
+            <div class="wallpaper">
+                <img src="https://source.unsplash.com/300x300/?fundo-verde" />
+            </div>
+            <div class="cadastro">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input name="username" type="text" placeholder="Login" />
+                    <input name="email" type="text" placeholder="E-mail" />
+                    <input
+                        name="password"
+                        type="password"
+                        placeholder="Senha"
+                    />
+                    <input
+                        name="repassword"
+                        type="password"
+                        placeholder="Repita sua senha"
+                    />
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

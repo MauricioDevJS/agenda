@@ -16,6 +16,10 @@
         />
     </head>
     <body>
+        <div class="header">
+            <a href="{% url 'cadastro' %}">Cadastrar</a>
+            <a href="{% url 'logout' %}">Sair</a>
+        </div>
         <h1>Agenda</h1>
 
         <form action="{% url 'busca' %}">
@@ -73,7 +77,5 @@
             <a href="#">4</a>
             <a href="#">5</a>
         </div>
-
-        <a href="{% url 'logout' %}">Sair</a>
     </body>
 </html>
