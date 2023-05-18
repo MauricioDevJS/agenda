@@ -9,7 +9,25 @@
 .header{
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    padding: 10px 10px;
+    width: 800px;
+    margin: 10px auto;
+    background-color: rgb(20, 214, 46);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    font-size: 20px;
+}
+
+.header h1{
+    color: #fff;
+}
+
+.header > a:visited {
+    color: #fff;
+}
+
+.header > a:hover {
+    color: #000;
 }
 
 table{
@@ -22,7 +40,7 @@ table{
 }
 
 thead > tr{
-    background-color: green;
+    background-color: rgb(20, 214, 46);
     color: white;
 }
 
@@ -35,7 +53,7 @@ tbody > tr:nth-last-of-type(even){
 }
 
 tbody > tr:last-of-type{
-    border-bottom: 3px solid green;
+    background-color: rgb(20, 214, 46);
 }
 
 
@@ -44,23 +62,29 @@ tbody > tr:last-of-type{
     width: 800px;
     margin: 5px auto;
     gap: 5px;
-    justify-content: center;
+    justify-content: left;
 }
 
 .pagination > a{
-    background-color: green;
+    background-color: rgb(20, 214, 46);
     padding: 10px 15px;
     color: white;
     border-radius: 10px;
 }
 
+.pagination > a:hover{
+    background-color: rgb(20, 214, 46);
+    color: #000;
+}
+
 h1{
     text-align: center;
     margin: 10px;
+    color: rgb(20, 214, 46);
 }
 
 form{
-    width: 800px;
+    width: 500px;
     padding: 0 12px;
     margin: 0 auto;
     display: flex;
@@ -71,9 +95,6 @@ form{
     height: 2rem;
     padding: 0 2px;
 }
-
-
-
 
 .card{
     position: relative;
@@ -154,7 +175,7 @@ form{
 }
 
 .btn > a:nth-child(2){
-    background-color: rgb(127, 209, 19);
+    background-color: rgb(20, 214, 46);
 }
 
 
@@ -181,12 +202,41 @@ form{
     background-color: tomato;
 }
 
-.login_screen{
-    display: flex;
-    justify-content: space-between;
-}
-
-.cadastro_screen{
+.card_login form{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 100px 10px;
+    margin: 10px auto;
+    background-color: rgb(20, 214, 46);
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px black;
+    font-size: 20px;
+}
+
+.card_login > form > input, button{
+    font-size: 20px;
+    width: 80%;
+    text-align: left;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 12px 0;
+    border: 2px black solid;
+   
+}
+
+.card_login form > button{
+    text-align: center;
+    
+}
+
+.card_login form > button:hover{
+    background-color: rgba(20, 214, 46, 0.453);
+    color: #fff;
+}
+
+.card_login form > h6{
+    color: #fff;
+    font-size: 20px;
 }
