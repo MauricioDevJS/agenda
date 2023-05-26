@@ -6,13 +6,29 @@
     text-decoration: none;
 }
 
+/* Color Theme Swatches in Hex
+.22:38-1-hex { color: #10454F; }
+.22:38-2-hex { color: #506266; }
+.22:38-3-hex { color: #818274; }
+.22:38-4-hex { color: #A3AB78; }
+.22:38-5-hex { color: #BDE038; } */
+
+/* Color Theme Swatches in RGBA */
+/* .22:38-1-rgba { color: rgba(16, 69, 79, 1); }
+.22:38-2-rgba { color: rgba(79, 98, 102, 1); }
+.22:38-3-rgba { color: rgba(128, 130, 116, 1); }
+.22:38-4-rgba { color: rgba(163, 170, 119, 1); }
+.22:38-5-rgba { color: rgba(189, 224, 55, 1); } */
+body{
+    background-color: #10454f;
+}
 .header{
     display: flex;
     justify-content: space-between;
     padding: 10px 10px;
     width: 800px;
     margin: 10px auto;
-    background-color: rgb(20, 214, 46);
+    background-color: #BDE038;
     color: white;
     border-radius: 10px 10px 0 0;
     font-size: 20px;
@@ -40,11 +56,13 @@ table{
 }
 
 thead > tr{
-    background-color: rgb(20, 214, 46);
+    text-align: center;
+    background-color: #BDE038;
     color: white;
 }
 
 tr > th, tr > td{
+    text-align: center;
     padding: 15px 20px;
 }
 
@@ -53,7 +71,7 @@ tbody > tr:nth-last-of-type(even){
 }
 
 tbody > tr:last-of-type{
-    background-color: rgb(20, 214, 46);
+    background-color: #BDE038;
 }
 
 
@@ -66,34 +84,45 @@ tbody > tr:last-of-type{
 }
 
 .pagination > a{
-    background-color: rgb(20, 214, 46);
+    background-color: #BDE038;
     padding: 10px 15px;
     color: white;
     border-radius: 10px;
 }
 
 .pagination > a:hover{
-    background-color: rgb(20, 214, 46);
+    background-color: #506266;;
     color: #000;
 }
 
 h1{
     text-align: center;
     margin: 10px;
-    color: rgb(20, 214, 46);
+    color: #BDE038;
+    padding: 20px 0;
 }
 
 form{
-    width: 500px;
+    width: 800px ;
     padding: 0 12px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .form-inputs > input{
     height: 2rem;
     padding: 0 2px;
+}
+.form-inputs > button{
+    height: 2rem;
+    padding: 0 2px;
+}
+.form-inputs > button:hover{
+    background-color: #506266;;
+    color: #fff;
+    cursor: pointer;
 }
 
 .card{
@@ -163,19 +192,15 @@ form{
     margin: 0 5px;
 }
 
-.form-inputs{
+form > .form-inputs{
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 6px;
 }
 
-.form-inputs > button{
-    height: 2rem;
-    padding: 0 6px;
-}
-
 .btn > a:nth-child(2){
-    background-color: rgb(20, 214, 46);
+    background-color: #506266;;
 }
 
 
@@ -186,6 +211,7 @@ form{
     justify-content: flex-end;
     gap: 20px;
     align-items: center;
+    
 }
 
 .add-btn > a, .btn-filter > a{
@@ -196,20 +222,32 @@ form{
 }
 
 .btn-filter > a:nth-child(1){
-    background-color: rgb(20, 214, 46);
+    background-color: #ccff33;
 }
 .btn-filter > a:nth-child(2){
     background-color: tomato;
 }
 
+.btn-filter > a:hover{
+    background-color: #506266;;
+    color: #000;
+    cursor: pointer;
+}
+.add-btn > a:hover{
+    background-color: #506266;;
+    color: #000;
+    cursor: pointer;
+}
+
 .card_login form{
+    width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
     padding: 100px 10px;
     margin: 10px auto;
-    background-color: rgb(20, 214, 46);
+    background-color: #BDE038;
     border-radius: 20px;
     box-shadow: 3px 3px 5px black;
     font-size: 20px;
@@ -232,8 +270,9 @@ form{
 }
 
 .card_login form > button:hover{
-    background-color: rgba(20, 214, 46, 0.453);
+    background-color: #506266;;
     color: #fff;
+    cursor: pointer;
 }
 
 .card_login form > h6{
@@ -246,4 +285,44 @@ form{
     padding: 20px 0;
     font-size: 50px;
     color: #000;
+}
+
+.card_add > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 100px 10px;
+    margin: 10px auto;
+    background-color: #BDE038;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px black;
+    font-size: 20px;
+}
+
+.card_add > form > button:hover{
+    background-color: #506266;;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card_add form > button{
+    text-align: center;   
+}
+
+.card_add > form > i{
+    width: 20% 100px;
+    padding: 20px 0;
+    font-size: 50px;
+    color: #000;
+}
+
+.card_add > form > input, button{
+    font-size: 20px;
+    width: 80%;
+    text-align: left;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 12px 0;
+    border: 2px black solid;
 }

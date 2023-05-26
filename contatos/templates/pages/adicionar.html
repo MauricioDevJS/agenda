@@ -17,9 +17,10 @@
         ></script>
     </head>
     <body>
-        <div class="main">
+        <div class="card_add">
             <form method="POST" enctype="multipart/form-data" action="">
                 {% csrf_token %}
+                <i class="fa-solid fa-user"></i>
                 <input name="nome" type="text" placeholder="nome" />
                 <input class="cpf" name="cpf" type="text" placeholder="cpf" />
                 <input name="email" type="text" placeholder="email" />

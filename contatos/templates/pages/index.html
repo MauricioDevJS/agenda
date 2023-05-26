@@ -18,6 +18,10 @@
     <body>
         <div class="header">
             <a href="{% url 'cadastro' %}">Cadastrar</a>
+            <p>{{user}}</p>
+            {% if user.is_superuser %}
+            <a href="{% url 'ver_usuarios' %}">Ver usuários</a>
+            {% endif %}
             <a href="{% url 'logout' %}">Sair</a>
         </div>
         <h1>Agenda</h1>
@@ -33,6 +37,7 @@
             </div>
             <div class="add-btn">
                 <a href="{% url 'adicionar' %}">+ Adicionar contato</a>
+
                 <div class="btn-filter">
                     <a href="{% url 'adicionar' %}">Ativos</a>
                     <a href="{% url 'adicionar' %}">Inativos</a>
